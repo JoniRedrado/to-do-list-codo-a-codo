@@ -10,12 +10,16 @@ const TaskProvider = ( {children} ) => {
         console.log(tasks);
     }
 
+    const deleteTask = (task) => {
+        setTasks(tasks.filter( e => e.title !== task))
+    }
 
     return (
         <TaskContext.Provider
         value={{
             tasks,
             addTask,
+            deleteTask,
             }}
         >
             {children}

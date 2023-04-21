@@ -10,7 +10,7 @@ const AddTask = () => {
   const handleClick = () => {
     const title = document.getElementById('task-title')
     const description = document.getElementById('task-descrition')
-    const task = {title: title.value, description: description.value}
+    const task = {title: title.value, description: description.value, complete: false}
     addTask(task)
     title.value=""
     description.value=""
